@@ -77,15 +77,15 @@ def gpt4v(prompt=test_prompt, detail="auto"):
     import base64
 
     # Function to encode the image
-    def encode_image(image_path):
+    def encode_image():    # image_path):
         return base64.b64encode(img.to_jpeg().to_bytes()).decode('utf-8')
 
             # with open(image_path, "rb") as image_file:
             #     return base64.b64encode(image_file.read()).decode('utf-8')
 
     # Path to your image
-    image_path = \
-    "/root/langtable_blocks.png"
+    # image_path = \
+    # "/root/langtable_blocks.png"
     # "./langtable_real.jpeg"
     # output_image100.jpg"
 
@@ -94,7 +94,7 @@ def gpt4v(prompt=test_prompt, detail="auto"):
     # resized_image = cv2.resize(image, (new_width, new_height), interpolation=cv2.INTER_AREA)
 
     # Getting the base64 string
-    base64_image = encode_image(image_path)
+    base64_image = encode_image()    # image_path)
     print(len(base64_image))
     
     # base64_image_sim = encode_image(image_path)
